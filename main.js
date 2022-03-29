@@ -32,7 +32,7 @@ function download(){
     
             
 
-        alert(trackID)
+        // alert(trackID)
         
        
 
@@ -43,15 +43,16 @@ function download(){
 
         /*Advanced download */
         songInfo.innerHTML+="loading..."
-        let pieceOFmusic;
+        
         //request
         
         fetch(muffonAPI+trackID).then(function (response){
             return response.json();
         }).then(function (obj){
             console.log(obj);
-            pieceOFmusic=obj;
-            songInfo.innerHTML+=obj;
+            advanced(obj);
+
+            
         }).catch(function (e){
             console.error("You've got problem buddy");
             console.error(e);
@@ -67,12 +68,19 @@ function download(){
         // let downloadLink = "https://files.muffon.endorphine.by/temp/audio/spotify/" + spotifyURL + ".mp3";
         //https://files.muffon.endorphine.by/temp/audio/spotify/
         
-    }
-
-    
-    
+    }    
 }
 
+
+function advanced(song){
+    console.log(JSON.stringify(song))
+    songInfo.innerHTML+=JSON.stringify(song);
+
+    // for (const property in song) {
+    //     console.log(`${property}: ${object[property]}`);
+    //   }
+
+}
 
 // responseText: "{\"track\":{\"player_id\":\"8511d1a5-f5f5-4311-8483-6bebf25c3378\",\"source_id\":\"spotify\",\"spotify_id\":\"6yr8GiTHWvFfi4o6Q5ebdT\",\"title\":\"'Till I Collapse\",\"artists\":[{\"name\":\"Eminem\",\"spotify_id\":\"7dGJo4pcD2V6oG8kP0tJRR\"},{\"name\":\"Nate Dogg\",\"spotify_id\":\"1Oa0bMld0A3u5OTYfMzp5h\"}],\"album\":{\"source_id\":\"spotify\",\"spotify_id\":\"1ftvBBcu7jYIvXyt3JWB8S\",\"title\":\"The Eminem Show\"},\"image\":{\"original\":\"https://i.scdn.co/image/ab67616d0000b273ccdb1982626f299b3b1d3efd\",\"large\":\"https://i.scdn.co/image/ab67616d0000b273ccdb1982626f299b3b1d3efd\",\"medium\":\"https://i.scdn.co/image/ab67616d00001e02ccdb1982626f299b3b1d3efd\",\"small\":\"https://i.scdn.co/image/ab67616d00004851ccdb1982626f299b3b1d3efd\",\"extrasmall\":\"https://i.scdn.co/image/ab67616d00004851ccdb1982626f299b3b1d3efd\"},\"duration\":\"04:58\",\"duration_seconds\":298,\"audio\":{\"present\":true,\"link\":\"https://files.muffon.endorphine.by/temp/audio/spotify/6yr8GiTHWvFfi4o6Q5ebdT.mp3\",\"source_id\":\"spotify\"}}}"
 
