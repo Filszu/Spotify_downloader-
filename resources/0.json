@@ -1,0 +1,21 @@
+{"track":
+    {"player_id":"32c8f299-b1e0-461d-b498-d8ea2b045025",
+        "source_id":"spotify",
+        "spotify_id":"0HqZX76SFLDz2aW8aiqi7G",
+        "title":"Bones",
+        "artists":[{"name":"Imagine Dragons",
+            "spotify_id":"53XhwfbYqKCa1cC15pYq2q"}],
+        "album":{"source_id":"spotify",
+            "spotify_id":"1Q9SnHWPNEjVM0LrBFvJ1q",
+            "title":"Bones"},
+        "image":{"original":"https://i.scdn.co/image/ab67616d0000b273813713582dcc508e7d5073c4",
+        "large":"https://i.scdn.co/image/ab67616d0000b273813713582dcc508e7d5073c4",
+        "medium":"https://i.scdn.co/image/ab67616d00001e02813713582dcc508e7d5073c4",
+        "small":"https://i.scdn.co/image/ab67616d00004851813713582dcc508e7d5073c4",
+        "extrasmall":"https://i.scdn.co/image/ab67616d00004851813713582dcc508e7d5073c4"},
+        "duration":"02:46",
+        "duration_seconds":166,
+        "audio":{"present":true,
+        "link":"https://files.muffon.endorphine.by/temp/audio/spotify/0HqZX76SFLDz2aW8aiqi7G.mp3",
+        "source_id":"spotify"}}
+}
