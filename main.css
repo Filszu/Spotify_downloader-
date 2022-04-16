@@ -111,6 +111,7 @@ input{
     border-radius: 25px;
     outline: none;
     border: 5px solid var(--green);
+    margin: 5px;
     
 }
 
@@ -131,4 +132,14 @@ input{
     width: 55px;
     margin: auto;
     
+}
+
+
+.blob-motion{
+    position: absolute;
+    transform: translateY(-10%);
+    z-index: 0;
+    aspect-ratio: 900/300;
+   width: 100%;
+   z-index: -2;
 }
