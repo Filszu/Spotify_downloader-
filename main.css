@@ -1,56 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
-*{
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html{
+html {
     scroll-behavior: smooth;
     font-size: 22px;
     --green: #1ED760;
 
 }
 
-body{
+body {
     font-family: 'Prompt', sans-serif;
     color: white;
     background: #1a1a1a;
 }
 
-.container{
+.container {
     width: 100%;
     display: grid;
     grid-column: 1fr;
     position: relative;
 }
 
-header{
+header {
     position: relative;
     font-size: 1.8rem;
-    z-index: 5;
+    
+    min-height: 10px;
 }
-header h1{
+
+header h1 {
     text-align: right;
     display: block;
     padding-right: 15px;
+    z-index: 5;
 }
 
 
-.mainLogo img{
+.mainLogo img {
     /* border: 1rem solid white; */
-    
-    
+
+    z-index: 5;
     border-radius: 50%;
-     width: 100%;
-    
-     -webkit-box-shadow: 8px 8px 44px -1px rgba(40, 64, 40, 1);
-     -moz-box-shadow: 8px 8px 44px -1px rgba(40, 64, 40, 1);
-     box-shadow: 8px 8px 44px -1px rgba(40, 64, 40, 1);
-     
+    width: 100%;
+
+    -webkit-box-shadow: 8px 8px 44px -1px rgba(40, 64, 40, 1);
+    -moz-box-shadow: 8px 8px 44px -1px rgba(40, 64, 40, 1);
+    box-shadow: 8px 8px 44px -1px rgba(40, 64, 40, 1);
+
 }
-.mainLogo{
-   
+
+.mainLogo {
+
     z-index: 3;
     top: 30px;
     left: 10px;
@@ -64,26 +69,66 @@ header h1{
 
 
 
-.spacer{
+.spacer {
     aspect-ratio: 900/300;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
- 
- }
- 
-.layer1{
-     background-image: url('img/bg1.svg');
-     position: absolute;
-     z-index: -1;
-     top: 0;
-   
-     
- 
-}
- 
+    z-index: -10;
 
- .flip{
-     transform: rotate(180deg);
- }
+}
+
+.layer1 {
+    background-image: url('img/bg1.svg');
+    position: absolute;
+    
+    top: 0;
+
+
+
+}
+
+
+.flip {
+    transform: rotate(180deg);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    grid-column: 1/2;
+    z-index: 2;
+}
+
+.input_area{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+input{
+    padding: 15px;
+    border-radius: 25px;
+    outline: none;
+    border: 5px solid var(--green);
+    
+}
+
+.input_area input{
+    /* height: 80px; */
+}
+
+.download_btn{
+    
+    /* border: 5px solid black; */
+    padding: 0;
+    display: flex;
+    
+    
+}
+
+.download_btn svg{
+    width: 55px;
+    margin: auto;
+    
+}
