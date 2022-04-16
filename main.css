@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 22px;
+    --green: #1ED760;
+
+}
+
+body{
+    font-family: 'Prompt', sans-serif;
+    color: white;
+    background: #1a1a1a;
+}
+
+.container{
+    width: 100%;
+    display: grid;
+    grid-column: 1fr;
+    position: relative;
+}
+
+header{
+    position: relative;
+    font-size: 1.8rem;
+    z-index: 5;
+}
+header h1{
+    text-align: right;
+    display: block;
+    padding-right: 15px;
+}
+
+
+.mainLogo img{
+    /* border: 1rem solid white; */
+    
+    
+    border-radius: 50%;
+     width: 100%;
+    
+     -webkit-box-shadow: 8px 8px 44px -1px rgba(40, 64, 40, 1);
+     -moz-box-shadow: 8px 8px 44px -1px rgba(40, 64, 40, 1);
+     box-shadow: 8px 8px 44px -1px rgba(40, 64, 40, 1);
+     
+}
+.mainLogo{
+   
+    z-index: 3;
+    top: 30px;
+    left: 10px;
+    position: absolute;
+    width: 20%;
+}
+
+/* .logo_box{
+    display: flex;
+} */
+
+
+
+.spacer{
+    aspect-ratio: 900/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+ 
+ }
+ 
+.layer1{
+     background-image: url('img/bg1.svg');
+     position: absolute;
+     z-index: -1;
+     top: 0;
+   
+     
+ 
+}
+ 
+
+ .flip{
+     transform: rotate(180deg);
+ }
