@@ -10,13 +10,14 @@ html {
     scroll-behavior: smooth;
     font-size: 22px;
     --green: #1ED760;
+    --dark: #1a1a1a;
 
 }
 
 body {
     font-family: 'Prompt', sans-serif;
     color: white;
-    background: #1a1a1a;
+    background: var(--dark);
 }
 
 .container {
@@ -30,7 +31,7 @@ header {
     position: relative;
     font-size: 1.8rem;
     
-    min-height: 10px;
+    min-height: 100px;
 }
 
 header h1 {
@@ -47,6 +48,7 @@ header h1 {
     z-index: 5;
     border-radius: 50%;
     width: 100%;
+    /* transition: 1s all ease-in-out; */
 
     -webkit-box-shadow: 8px 8px 44px -1px rgba(40, 64, 40, 1);
     -moz-box-shadow: 8px 8px 44px -1px rgba(40, 64, 40, 1);
@@ -99,6 +101,7 @@ main{
     justify-content: center;
     grid-column: 1/2;
     z-index: 2;
+    text-align: center;
 }
 
 .input_area{
@@ -124,6 +127,7 @@ input{
     /* border: 5px solid black; */
     padding: 0;
     display: flex;
+    cursor: pointer;
     
     
 }
@@ -133,13 +137,120 @@ input{
     margin: auto;
     
 }
+.downloadLink__error{
+    color: rgba(243, 35, 8, 0.973);
+}
+.downloadLink{
+    padding: 25px;
+}
+/* ======================= */
 
+.song_title{
+    font-size: 1.5rem;
+}
 
+.song_image{
+
+}
+
+.song_image img{
+    width: 50%;
+    border-radius: 50px;
+}
+/* ================ */
+
+a{
+    color:white;
+
+}
+/* =========================== */
+.blob{
+    width:100%;
+    position: relative;
+}
 .blob-motion{
     position: absolute;
     transform: translateY(-10%);
     z-index: 0;
+    /* top: 0px; */
     aspect-ratio: 900/300;
    width: 100%;
    z-index: -2;
+   top: 0;
+}
+
+.songInfo{
+    text-align: center;
+    z-index: 2;
+}
+
+
+
+
+body::-webkit-scrollbar {
+    width: 5px; 
+    height: 5px;              
+  }
+  
+  body::-webkit-scrollbar-track {
+   
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--green);    
+    
+  }
+
+
+
+
+
+/* ---------------------------------- */
+
+@media screen and (min-width: 768px){
+    .mainLogo{
+        /* top: 100px; */
+        
+         transform: translateY(10vh);
+    }
+    header{
+        min-height: 200px;
+        /* font-size: 2rem; */
+    }
+
+    header h1{
+        text-align: center;
+    }
+    input{
+        font-size: 1.1rem;
+    }
+
+   
+}
+
+@media screen and (min-width: 1024px){
+    /* .mainLogo{
+
+        
+         transform: translateY(10vh);
+    } */
+    html{
+        font-size: 30px;
+    }
+    header{
+        min-height: 400px;
+
+    }
+
+  
+}
+
+@media screen and (min-width: 1280px){
+
+    header{
+        /* min-height: 400px; */
+        font-size: 2rem;
+    }
+
+  
 }
