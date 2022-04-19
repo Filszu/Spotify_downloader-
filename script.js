@@ -6,9 +6,15 @@ const dwLinkBox = document.querySelector(".downloadLink");
 const dwLinkError = document.querySelector(".downloadLink__error");
 const songInfo = document.querySelector(".songInfo");
 const downBTN = document.querySelector(".download_btn")
+btnClicked = false;
 downBTN.addEventListener('click', function(){
-    download()
-    buttonTransform.start()
+    
+    if(btnClicked==false){
+        btnClicked=true;
+        download()
+        buttonTransform.start()
+    }
+    
 });
 
 
@@ -20,6 +26,7 @@ function download(){
     if(!(spotifyURL.startsWith(standardSpotifyUrl))){
         validURL=false
         dwLinkError.innerHTML="correct form: https://open.spotify.com/track/..."
+        btnClicked=false;
     }
     else{
         let trackID;
@@ -106,7 +113,7 @@ function advanced(song){
 
 
 
-    dwLinkBox.innerHTML+=`<br><br>Advanced download:<br><a href="${downloadLink}" target="_blank" title="download with artist and album image" onclick="download with artist and album image" download="${song.getTitle()}">${song.getTitle()}.ogg</a>`;
+    dwLinkBox.innerHTML+=`<br><br>Advanced download:<br><a href="${downloadLink}" target="_blank" title="download with artist and album image" onclick="alert('download with artist and album image\n SOON')" download="${song.getTitle()}">${song.getTitle()}.ogg</a>`;
 
     // proBtn.addEventListener("click", ()=>{
     //     proDownload(song.getTitle(),downloadLink);

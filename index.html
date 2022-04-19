@@ -1,25 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify downloader</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.2/dist/kute.min.js"></script>
 </head>
+
 <body>
-   <input type="url" name="trackID" id="trackID" value="https://open.spotify.com/track/0HqZX76SFLDz2aW8aiqi7G?si=2860134135df4f63">
-   <button id="downloadTrack">download</button>
-   <div class="downloadLink"><h2>Direct download link: </h2></div>
-   <h2>Advanced download</h2>
-   <div class="songInfo">
-        
-   </div>
-   <button id="proDownload" href="#">PRO download</button>
-   
-   <hr>
-   https://open.spotify.com/track/0HqZX76SFLDz2aW8aiqi7G?si=2860134135df4f63
+    <div class="container">
+        <!-- <div class="spacer layer1 flip"></div> -->
+        <header>
+
+            <!-- <div class="logo_box"></div> -->
+            <div class="mainLogo">
+
+                <img src="/img/logo1.svg" alt="spotify_logo">
+            </div>
+            <h1>Spotify downloader</h1>
+            <div class="spacer layer1 flip"></div>
+
+
+
+
+
+        </header>
+        <main>
+            <div class="input_area">
+                <input type="url" name="url" id="url">
+
+
+                <div class="download_btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 168 168">
+                        <g style="visibility: hidden">
+                            <path id="btnStyle2" fill="#1ED760"
+                                d="m83.996 0.277c-46.249 0-83.743 37.493-83.743 83.742 0 46.251 37.494 83.741 83.743 83.741 46.254 0 83.744-37.49 83.744-83.741 0-46.246-37.49-83.738-83.745-83.738l0.001-0.004zm38.404 120.78c-1.5 2.46-4.72 3.24-7.18 1.73-19.662-12.01-44.414-14.73-73.564-8.07-2.809 0.64-5.609-1.12-6.249-3.93-0.643-2.81 1.11-5.61 3.926-6.25 31.9-7.291 59.263-4.15 81.337 9.34 2.46 1.51 3.24 4.72 1.73 7.18zm10.25-22.805c-1.89 3.075-5.91 4.045-8.98 2.155-22.51-13.839-56.823-17.846-83.448-9.764-3.453 1.043-7.1-0.903-8.148-4.35-1.04-3.453 0.907-7.093 4.354-8.143 30.413-9.228 68.222-4.758 94.072 11.127 3.07 1.89 4.04 5.91 2.15 8.976v-0.001zm0.88-23.744c-26.99-16.031-71.52-17.505-97.289-9.684-4.138 1.255-8.514-1.081-9.768-5.219-1.254-4.14 1.08-8.513 5.221-9.771 29.581-8.98 78.756-7.245 109.83 11.202 3.73 2.209 4.95 7.016 2.74 10.733-2.2 3.722-7.02 4.949-10.73 2.739z" />
+                        </g>
+
+
+                        <g id="surface1">
+                            <path id="btnStyle1" style=" stroke:none;fill-rule:nonzero;fill:#1ED760;fill-opacity:1;"
+                                d="M 73.5 21 L 73.5 97.578125 L 45.710938 69.789062 L 38.289062 77.210938 L 78.75 117.671875 L 119.210938 77.210938 L 111.789062 69.789062 L 84 97.578125 L 84 21 Z M 31.5 136.5 L 31.5 147 L 126 147 L 126 136.5 Z M 31.5 136.5 " />
+                        </g>
+
+                    </svg>
+                </div>
+                <div class="downloadLink__error"></div>
+                <div class="downloadLink">&nbsp</div>
+
+            </div>
+
+
+        </main>
+
+        <section class="blob">
+            <div class="songInfo">
+                <div class="song_title"></div>
+                <div class="song_image"></div>
+                <div class="song_PRO_link"></div>
+                <div class="song_artists"></div>
+                <div class="song_duration"></div>
+            </div>
+            <svg class="blob-motion" id="visual" viewBox="0 0 900 300" width="900" height="300"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                <g transform="translate(411.72887312356846 160.5357210593226)">
+                    <path id="blob1"
+                        d="M94.8 -139.5C126.2 -127.4 157.2 -106.7 178.5 -76.7C199.8 -46.7 211.2 -7.3 207.6 31C203.9 69.4 185.1 106.7 151.9 114.9C118.8 123 71.3 102 37 100.4C2.7 98.8 -18.4 116.5 -49 126.2C-79.7 135.8 -120 137.3 -129.4 117.2C-138.8 97.2 -117.4 55.5 -104.1 26.2C-90.7 -3 -85.4 -19.8 -84.1 -45.1C-82.9 -70.4 -85.8 -104.2 -72.5 -124.6C-59.1 -145 -29.6 -152 1.1 -153.7C31.7 -155.4 63.4 -151.7 94.8 -139.5"
+                        fill="#1ED760"></path>
+                </g>
+
+                <g transform="translate(441.4371014515461 137.49978925949)" style="visibility: hidden">
+                    <path id="blob2"
+                        d="M95.7 -125.5C129.9 -127.1 167.3 -110.3 179.1 -82.4C190.9 -54.5 177.1 -15.5 166.8 20.7C156.5 56.9 149.7 90.3 129.1 109C108.5 127.6 74.1 131.4 42.3 138.2C10.4 144.9 -18.9 154.5 -49.9 153.1C-81 151.7 -113.8 139.4 -135.5 116.3C-157.1 93.2 -167.7 59.4 -166.4 27.7C-165.2 -4.1 -152.2 -33.8 -139.1 -63.9C-125.9 -94 -112.7 -124.4 -89.5 -127.9C-66.3 -131.3 -33.2 -107.9 -1.2 -106C30.8 -104.2 61.6 -124 95.7 -125.5"
+                        fill="#1ED760"></path>
+                </g>
+
+
+            </svg>
+        </section>
+        <footer></footer>
+
+    </div>
 </body>
+<script src="./script.js"></script>
 
-
-<script src="main.js"></script>
 </html>
