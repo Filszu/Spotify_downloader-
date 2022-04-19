@@ -29,8 +29,8 @@ body {
 
 header {
     position: relative;
-    font-size: 1.8rem;
-    
+    /* font-size: 1.8rem; */
+    font-size: 1.4rem;
     min-height: 100px;
 }
 
@@ -206,7 +206,11 @@ body::-webkit-scrollbar {
 
 
 /* ---------------------------------- */
-
+@media screen and (min-width: 420px){
+    header{
+        font-size: 1.8rem;
+    }
+}
 @media screen and (min-width: 768px){
     .mainLogo{
         /* top: 100px; */
