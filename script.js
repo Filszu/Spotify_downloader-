@@ -1,5 +1,5 @@
 let downloadLink;//just mp3
-const muffonAPI="https://muffon.endorphine.by/api/v2/spotify/tracks/"
+const muffonAPI="https://178-79-138-81.ip.linodeusercontent.com/api/v3/spotify/tracks/"
 const standardSpotifyUrl="https://open.spotify.com/track/";
 
 const dwLinkBox = document.querySelector(".downloadLink");
@@ -39,7 +39,7 @@ function download(){
        
 
         //simple download
-        downloadLink = `https://files.muffon.endorphine.by/temp/audio/spotify/`+trackID+`.mp3`;
+        downloadLink = `https://178-79-138-81.ip.linodeusercontent.com/files/audio/spotify/`+trackID+`.mp3`;
         dwLinkBox.innerHTML=`<a href="${downloadLink}" target="_blank"> download *.mp3</a>`;
         dwLinkError.innerHTML="";
 

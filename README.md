@@ -1,6 +1,6 @@
-# Spotify donwloader 
+# Spotify downloader v1.1.9
 
-Hi! It's a simple **Spotify donwloader**. 
+Hi! It's a simple **Spotify downloader**. 
 you can test it directly on [ciac.me/spotify](https://ciac.me/spotify)🔌🌐.
 The program is written in plain JS
 
@@ -18,5 +18,5 @@ The program is written in plain JS
 | main | css |
 
 
-![enter image description here](https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg)
+![spotify](https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg)
 # Enojy😁

@@ -5,6 +5,8 @@
 //https://files.muffon.endorphine.by/temp/audio/spotify/7Ie9W94M7OjPoZVV216Xus.mp3
 // import { saveAs } from 'https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js';
 
+// https://178-79-138-81.ip.linodeusercontent.com/api/v3/spotify/tracks/
+
 
 const btn = document.querySelector("#downloadTrack");
 const dwLinkBox = document.querySelector(".downloadLink");
@@ -17,7 +19,8 @@ btn.addEventListener("click", download);
 let downloadLink;//just mp3
 // const muffonAPI ="https://files.muffon.endorphine.by/temp/audio/spotify/7Ie9W94M7OjPoZVV216Xus.mp3"
 // const muffonAPI = "https://muffon.endorphine.by/api/v2/spotify/tracks/7Ie9W94M7OjPoZVV216Xus";
-const muffonAPI="https://muffon.endorphine.by/api/v2/spotify/tracks/"
+// https://178-79-138-81.ip.linodeusercontent.com/api/v3/spotify/tracks/
+const muffonAPI="https://178-79-138-81.ip.linodeusercontent.com/api/v3/spotify/tracks/"
 const standardSpotifyUrl="https://open.spotify.com/track/";
 
 function download(){
@@ -39,7 +42,7 @@ function download(){
        
 
         //simple download
-        downloadLink = `https://files.muffon.endorphine.by/temp/audio/spotify/`+trackID+`.mp3`;
+        downloadLink = `https://open.spotify.com/track/6RUKPb4LETWmmr3iAEQktW?si=dbca650f2896463a`+trackID+`.mp3`;
         dwLinkBox.innerHTML=`<a href="${downloadLink}" target="_blank"> ${downloadLink}</a>`;
 
 
