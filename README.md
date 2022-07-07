@@ -1,4 +1,4 @@
-# Spotify downloader v1.1.9
+# Spotify downloader v1.2.9
 
 Hi! It's a simple **Spotify downloader**. 
 you can test it directly on [ciac.me/spotify](https://ciac.me/spotify)🔌🌐.
